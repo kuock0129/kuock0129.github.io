@@ -88,7 +88,7 @@
     <!-- 開頭動畫區塊 -->
     <div id="intro-animation" style="display: flex; align-items: center;">
         <!-- 嵌入 MP4 動畫 -->
-        <video id="intro-video" width="100%" height="auto" autoplay muted>
+        <video id="intro-video" width="100%" height="auto" autoplay muted onended="redirectToPage()">
             <source src="images/Intro.mp4" type="video/mp4">
             An architect and computer engineer dedicated to crafting innovative Human-Computer Interfaces that integrate the convergence of the digital and physical realms.
         </video>
@@ -96,5 +96,13 @@
 
 
     <script src="js/open_animation.js"></script>
+
+    <script>
+        // 在影片播放結束後執行的函式
+        function redirectToPage() {
+            // 可以更改下面的 URL 為你想要跳轉的目標網址
+            window.location.href = "main.html";
+        }
+    </script>
 </body>
 </html>
